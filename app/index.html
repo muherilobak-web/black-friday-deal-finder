@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friday Verdict — Real Black Friday Deals, Checked Today</title>
+<meta name="description" content="35 real Black Friday deals from 6 stores, each price read today and each verdict backed by evidence.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23b45309'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='bold' fill='%23fff' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1 class="brand">Friday Verdict<span class="dot">.</span></h1>
+    <p class="tagline">Every deal checked today. Every verdict honest.</p>
+    <div class="stats" role="group" aria-label="Deal statistics">
+      <div class="stat"><span class="num" id="stat-deals">–</span><span class="lbl">deals checked</span></div>
+      <div class="stat"><span class="num" id="stat-stores">–</span><span class="lbl">stores</span></div>
+      <div class="stat"><span class="num" id="stat-avg">–</span><span class="lbl">average discount</span></div>
+      <div class="stat wide"><span class="num" id="stat-checked">–</span><span class="lbl">prices last checked</span></div>
+    </div>
+  </div>
+</header>
+
+<div id="list-view">
+  <section class="controls" aria-label="Search and filters">
+    <div class="wrap">
+      <div class="controls-row">
+        <div class="field grow">
+          <label for="search">Search deals</label>
+          <input type="search" id="search" placeholder="Try “AirPods”, “LEGO”, or “Best Buy”" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="store-filter">Store</label>
+          <select id="store-filter"></select>
+        </div>
+        <div class="field">
+          <label for="min-discount">Minimum discount</label>
+          <select id="min-discount">
+            <option value="0">Any discount</option>
+            <option value="20">20% or more</option>
+            <option value="40">40% or more</option>
+            <option value="50">50% or more</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sort">Sort by</label>
+          <select id="sort">
+            <option value="verdict">Best verdict first</option>
+            <option value="discount">Biggest discount first</option>
+            <option value="price">Lowest price first</option>
+          </select>
+        </div>
+      </div>
+      <div class="controls-row" style="margin-top:12px">
+        <div class="field grow">
+          <label id="cat-label">Category</label>
+          <div class="cat-buttons" id="cat-buttons" role="group" aria-labelledby="cat-label"></div>
+        </div>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="deals" id="deal-grid"></div>
+  </main>
+</div>
+
+<section class="wrap detail" id="detail-view" hidden></section>
+
+<section class="method wrap" aria-label="How we check deals">
+  <h2>How we check</h2>
+  <p>Every price on this page was read directly from the named store or from a deal roundup that showed the price, on Friday 27 November 2026. A deal only appears here when its sale price and its regular price were both shown by that source at check time. Prices move fast on Black Friday — the price at checkout is the one that counts.</p>
+  <ul>
+    <li><strong>TRUE LOW</strong> — the source shows this is the lowest price ever recorded for the product, for example a price tracker’s lowest-ever figure or a roundup calling it the best price it has seen. We never give this badge without that evidence.</li>
+    <li><strong>STRONG DEAL</strong> — a cut of roughly 40% or more off a regular price that genuinely applies.</li>
+    <li><strong>ROUTINE SALE</strong> — a small cut, or a discount with no price-history evidence behind it. An honest routine sale beats a fake record low.</li>
+    <li><strong>INFLATED</strong> — the source shows the price was raised before the sale, or the discount is mostly cosmetic. None of today’s deals earned this badge.</li>
+  </ul>
+  <p>Two cautions we apply to our own list. First, Amazon raised the list prices of some of its own Echo, Fire TV, and Kindle devices earlier this year, so discounts on those are read against a higher starting price — the Echo Spot note says so plainly. Second, Apple raised the price of the 13-inch MacBook Air M5 (16GB / 512GB) from $1,099 to $1,299 in June, so its $999.99 Black Friday price is only $99 under what it cost before that rise.</p>
+  <p>Where the same product is on sale at two stores, both listings are shown so you can compare — AirPods Pro 3 at Amazon and Best Buy, the KitchenAid Artisan mixer at Amazon and Walmart, and the Dyson V8 at Walmart and Best Buy.</p>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Friday Verdict is an independent deal finder. It is not affiliated with Amazon, Best Buy, Walmart, Target, Nordstrom, or Samsung, and it earns nothing from the links on this page. All prices in US dollars, checked 27 Nov 2026, 14:15 WIB. Most prices run through Cyber Monday, 30 Nov 2026.</p>
+  </div>
+</footer>
+
+<script src="deals.js"></script>
+<script src="detail.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
